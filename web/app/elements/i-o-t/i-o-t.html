@@ -15,7 +15,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: block;
       }
     </style>
+    <firebase-app
+      name="iot"
+      api-key="AIzaSyCPkzhy1mnOz_G11wd2SgqPkehTKmYNubw"
+      auth-domain="iot-project-2d8c5.firebaseapp.com"
+      database-url="https://iot-project-2d8c5.firebaseio.com">
+    </firebase-app>
+
+    <firebase-document
+      id="color"
+      app-name="iot"
+      path="/color"
+      data="{{_color}}">
+    </firebase-document>
+
     <rgb-led color="{{_color}}"></rgb-led>
+    
     <iot-voice-element color="{{_color}}"></iot-voice-element>
   </template>
   <script>
