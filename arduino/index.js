@@ -24,18 +24,6 @@ board.on("ready", function() {
   firebaseDB = firebase.database();
   myFirebaseRef = firebaseDB.ref("color");
 
-  // var index = 0;
-  // var rainbow = ["FF0000", "FF7F00", "FFFF00", "00FF00", "0000FF", "4B0082", "8B00FF"];
-
-  // this.loop(1000, function() {
-  //   rgb.color(rainbow[index]);
-  //   index++;
-
-  //   if (index === rainbow.length) {
-  //     index = 0;
-  //   }
-  // });
-
   myFirebaseRef.on("value", function(snapshot) {
 	var color = snapshot.val();
 	console.log(color);
