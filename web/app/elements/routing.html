@@ -50,23 +50,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       app.route = 'home';
       setFocus(app.route);
     });
-
-    page('/users', function() {
-      app.route = 'users';
-      setFocus(app.route);
-    });
-
-    page('/users/:name', function(data) {
-      app.route = 'user-info';
-      app.params = data.params;
-      setFocus(app.route);
-    });
-
-    page('/contact', function() {
-      app.route = 'contact';
-      setFocus(app.route);
-    });
-
     // 404
     page('*', function() {
       app.$.toast.text = 'Can\'t find: ' + window.location.href  + '. Redirected you to Home Page';
