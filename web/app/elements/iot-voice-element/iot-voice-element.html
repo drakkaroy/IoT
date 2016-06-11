@@ -63,7 +63,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       },
 
       _onVoiceRecognitionResult: function(e) {
-        this.color = this.$.recognitionElement.text.toLowerCase();
+        this.color = this.$.recognitionElement.text.toLowerCase().replace(/ /g, '');
         this.$.recognitionElement.text = '';
       }
     });
