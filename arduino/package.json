@@ -8,6 +8,7 @@
     "url": ""
   },
   "dependencies": {
+    "firebase": "^3.0.4",
     "johnny-five": "^0.9.56"
   },
   "scripts": {
