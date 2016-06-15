@@ -17,6 +17,10 @@ var colors = {
 board.on("ready", function() {
   var rgb = new five.Led.RGB([9, 10, 11]);
   var button = new five.Button(2);
+  var temperature = new five.Thermometer({
+    controller: "TMP36",
+    pin: "A0"
+  });
 
   firebase.initializeApp({
 	databaseURL: "https://iot-project-2d8c5.firebaseio.com",
@@ -37,5 +41,9 @@ board.on("ready", function() {
 
   button.on("down", function() {
     myFirebaseRef.set('white');
+  });
+
+  temperature.on("change", function() {
+    console.log(this.celsius + "°C", this.fahrenheit + "°F");
   });
 });
